@@ -1,0 +1,15 @@
+# Use root/example as user/password credentials
+version: '3.8'
+
+services:
+  cliente:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - network
+    ports:
+      - "8080:8080"
+
+networks:
+  network:
